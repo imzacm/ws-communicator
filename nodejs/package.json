@@ -1,11 +1,12 @@
 {
   "name": "ws-communicator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A communication library using websockets",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist --source-maps"
+    "build": "babel src --out-dir dist --source-maps",
+    "prepublish": "npm run build"
   },
   "author": "Zac McChesney",
   "license": "MIT",

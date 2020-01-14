@@ -1,11 +1,12 @@
 {
   "name": "ws-communicator-web",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/ws-communicator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "snowpack --include \"src/**/*.js\" && babel src --out-dir dist --source-maps && babel web_modules --out-dir dist/web_modules --source-maps"
+    "build": "snowpack --include \"src/**/*.js\" && babel src --out-dir dist --source-maps && babel web_modules --out-dir dist/web_modules --source-maps",
+    "prepublish": "npm run build"
   },
   "author": "Zac McChesney",
   "license": "MIT",
