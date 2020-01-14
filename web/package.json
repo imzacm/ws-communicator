@@ -1,0 +1,22 @@
+{
+  "name": "ws-communicator-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/ws-communicator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "snowpack --include \"src/**/*.js\" && babel src --out-dir dist --source-maps && babel web_modules --out-dir dist/web_modules --source-maps"
+  },
+  "author": "Zac McChesney",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.8.0",
+    "@babel/core": "7.8.0",
+    "@babel/preset-env": "7.8.2",
+    "babel-plugin-add-import-extension": "1.1.0",
+    "snowpack": "1.0.3"
+  },
+  "dependencies": {
+    "eventemitter3": "4.0.0"
+  }
+}

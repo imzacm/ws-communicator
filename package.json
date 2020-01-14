@@ -1,0 +1,14 @@
+{
+  "name": "ws-communicator-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:nodejs": "cd nodejs && npm run build",
+    "build:web": "cd web && npm run build",
+    "build": "npm run build:nodejs && npm run build:web"
+  },
+  "author": "Zac McChesney",
+  "license": "MIT"
+}

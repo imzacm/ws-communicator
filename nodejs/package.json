@@ -1,0 +1,24 @@
+{
+  "name": "ws-communicator",
+  "version": "1.0.0",
+  "description": "A communication library using websockets",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist --source-maps"
+  },
+  "author": "Zac McChesney",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "7.2.1"
+  },
+  "optionalDependencies": {
+    "bufferutil": "4.0.1",
+    "utf-8-validate": "5.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.8.0",
+    "@babel/core": "7.8.0",
+    "@babel/preset-env": "7.8.2"
+  }
+}
