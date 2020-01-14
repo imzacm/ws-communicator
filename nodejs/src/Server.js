@@ -31,7 +31,7 @@ export class Server {
 
     this._clients[clientId].sendMessage('CONNECT', { clientId })
 
-    this.emitter.emit(params.get('clientId') ? 'RECONNECT' : 'CONNECT', this._clients[clientId])
+    this.emitter.emit('CONNECT', this._clients[clientId])
   }
 
   onStart(cb) {

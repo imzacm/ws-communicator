@@ -1,6 +1,6 @@
 {
   "name": "ws-communicator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A communication library using websockets",
   "main": "dist/index.js",
   "scripts": {
