@@ -20,6 +20,8 @@ export class Server {
     const params = new URLSearchParams(`?${ request.url.split('?')[1] }`)
     const clientId = params.get('clientId') || randomBytes(32).toString('hex')
 
+    ws.send(JSON.stringify({ event: '_clientId', clientId }))
+
     const clientOpts = { ws, request, id: clientId }
     if (!this._clients[clientId]) {
       this._clients[clientId] = new Client(clientOpts)

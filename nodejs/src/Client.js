@@ -17,6 +17,9 @@ export class Client {
   _handleMessage(message) {
     try {
       const data = JSON.parse(message)
+      if (data.event === '_clientId') {
+        this.id = data.clientId
+      }
       this.emitter.emit('MESSAGE', { event: data.event, data: data.data, client: this })
     } catch (error) {
       this.sendError(error)
