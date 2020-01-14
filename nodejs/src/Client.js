@@ -24,13 +24,15 @@ export class Client {
   }
 
   sendMessage(event, data) {
-    this.ws.send(JSON.stringify({ event, data }))
+    if (this.ws.readyState === WebSocket.OPEN) {
+      this.ws.send(JSON.stringify({ event, data }))
+      return
+    }
+    setTimeout(() => this.sendMessage(event, data), 1)
   }
 
   sendError(error) {
-    this.ws.send(JSON.stringify({
-      event: 'error', data: error.message
-    }))
+    this.sendMessage('error', { error: error.message })
   }
 
   onMessage(event, cb) {
