@@ -1,6 +1,6 @@
 import { randomBytes } from 'crypto'
 import { URLSearchParams } from 'url'
-import { EventEmitter } from 'events'
+import EventEmitter from 'eventemitter3'
 
 import WebSocket from 'ws'
 
