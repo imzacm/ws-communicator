@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="module">
+    import { Client } from '../node_modules/ws-communicator-web/dist/ws-communicator.js'
+    const client = new Client('ws://localhost:3333')
+    client.onMessage('*', console.log)
+  </script>
+</head>
+<body>
+
+</body>
+</html>

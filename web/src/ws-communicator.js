@@ -1,11 +1,11 @@
-import { EventEmitter } from './web_modules/eventemitter3'
+import EventEmitter from './web_modules/eventemitter3'
 
 export class Client {
   constructor(...wsOpts) {
     this.emitter = new EventEmitter()
     this.ws = new WebSocket(...wsOpts)
 
-    this.ws.on('message', this._handleMessage.bind(this))
+    this.ws.addEventListener('message', this._handleMessage.bind(this))
   }
 
   _handleMessage(message) {

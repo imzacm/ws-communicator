@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"node nodejs/test.js\" \"http-server . --port 8080\""
+  },
+  "author": "Zac McChesney",
+  "license": "MIT",
+  "dependencies": {
+    "ws-communicator": "file://../nodejs",
+    "ws-communicator-web": "file://../web"
+  },
+  "devDependencies": {
+    "concurrently": "5.0.2",
+    "http-server": "0.12.1"
+  }
+}
